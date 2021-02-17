@@ -1,0 +1,13 @@
+def Even():
+    i=0
+    start=2
+    end=20
+    for i in range(start,end+1):
+        if i%2==0:
+            print(i,end="  ")
+
+def main():
+    Even()
+
+if __name__=="__main__":
+    main()
