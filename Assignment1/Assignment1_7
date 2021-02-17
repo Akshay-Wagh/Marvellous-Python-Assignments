@@ -1,0 +1,16 @@
+def Divisible(No):
+    if No%5==0:
+        return True
+    else:
+        return False
+def main():
+    value=int(input("Enter Number"))
+    bret=Divisible(value)
+
+    if bret==True:
+        print("No is Divisible")
+    else:
+        print("No is not divisible")
+
+if __name__=="__main__":
+    main()
