@@ -1,0 +1,14 @@
+def Length(str):
+    icnt=0
+    for i in str:
+        icnt=icnt+1
+    return icnt
+
+def main():
+    print("Enter name")
+    value=str(input())
+    ret=Length(value)
+    print("Length of the name is",ret)
+
+if __name__=="__main__":
+    main()
