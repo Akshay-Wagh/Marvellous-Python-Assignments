@@ -1,0 +1,25 @@
+def ChkPos(No):
+    if No>0:
+        return True
+    elif No<0:
+        return False
+    elif No==0:
+        return -1
+
+def main():
+    print("Enter number")
+    value=int(input())
+
+    bret=ChkPos(value)
+
+    if bret==True or bret==False:
+        if bret==True:
+           print("Positive Number")
+        else:
+            print("Negative Number")
+    else:
+        print("Zero")
+
+if __name__=="__main__":
+    main()
+
