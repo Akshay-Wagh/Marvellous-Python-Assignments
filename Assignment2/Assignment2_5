@@ -1,23 +1,23 @@
-Write a program which accept one number from user and check whether number is prime or not.
-Input:5
-Output:It is prime number
+# Write a program which accept one number from user and check whether number is prime or not.
+# Input:5
+# Output:It is prime number
 
-def Prime(No):
-    if No>1:
-        for i in range(2,No,1):
-            if(No%i)==0:
-                return False
-            else:
-                return True
+def ChkPrime(No):
+    ret = True
+    j = int(No/2)
+    for i in range(2, (j+1)):
+        if(No%i==0):
+            ret = False
+            break
+    return ret
 
 def main():
-    print("Enter Number")
-    value=int(input())
-    bret=Prime(value)
+    value=int(input("Enter Number"))
+    bret=ChkPrime(value)
     if bret==True:
-        print("It is Prime number")
+        print("{} is Prime number".format(value))
     else:
-        print("It is not prime number")
+        print("{} is not prime number".format(value))
 
 
 if __name__=="__main__":
