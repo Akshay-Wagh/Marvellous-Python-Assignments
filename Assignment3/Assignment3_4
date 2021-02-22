@@ -1,0 +1,35 @@
+# Write a program which accept N numbers from user and store it into List.Accept one another number from user and return
+# frequency of that number from List.
+# Input: Number of elements: 11
+# Input Elements: 13 5 45 7 4 56 5 34 2 5 65
+# Element to search: 5
+# Output: 3
+
+def Frequency(List,No):
+    freq=0
+    for i in range(len(List)):
+        if List[i] == No:
+            freq = freq+1
+    return freq
+
+
+def main():
+    arr=[]
+    print("Enter the number of elements")
+    size=int(input())
+
+    for i in range(size):
+        print("Enter the elements",i+1)
+        value=int(input())
+        arr.append(value)
+
+
+    print("Enter element to Search")
+    value1=int(input())
+
+    ret=Frequency(arr, value1)
+    print("Output is", ret)
+
+
+if __name__=="__main__":
+    main()
