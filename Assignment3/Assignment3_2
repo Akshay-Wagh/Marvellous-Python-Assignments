@@ -1,0 +1,28 @@
+# Write a program which accept N numbers from user and store it into List.Return Maximum number from that List.
+# Input: Number of elements: 7
+# Input Elements: 13 5 45 7 4 56 34
+# Output: 56
+
+def Maximum(List):
+    max=0
+    for i in range(len(List)):
+        if List[i] > max:
+            max=List[i]
+    return max
+
+def main():
+    arr=[]
+    print("Enter the number of elements")
+    size=int(input())
+
+    for i in range(size):
+        print("Enter the elements",i+1)
+        value=int(input())
+        arr.append(value)
+
+    print("Accepted data is",arr)
+    ret=Maximum(arr)
+    print("Maximum number is",ret)
+
+if __name__=="__main__":
+    main()
