@@ -1,0 +1,38 @@
+# Write a program which accept N numbers from user and store it into List. Return addition of all
+# prime numbers from that List. Main python file accepts N numbers from user and pass each
+# number to ChkPrime() function which is part of our user defined module named as
+# MarvellousNum. Name of the function from main python file should be ListPrime().
+# Input : Number of elements : 11
+# Input Elements : 13 5 45 7 4 56 10 34 2 5 8
+# Output : 32 (13 + 5 + 7 + 2 + 5)
+
+def ChkPrime(List):
+    sum1=0
+    for i in range(0,len(List)):
+        No= List[i]
+        if No>1:
+            prime=True
+            for j in range(2, int(No**0.5)+1):
+                if No%j==0:
+                    prime=False
+                    break
+            if prime:
+                sum1=sum1+No
+    return sum1
+
+def main():
+    arr=[]
+    print("Enter number of Elements")
+    size=int(input())
+
+    for i in range(size):
+        print("Enter the elements", i+1)
+        value=int(input())
+        arr.append(value)
+    print("Your data is",arr)
+
+    ret=ChkPrime(arr)
+    print("Addition of prime numbers is:",ret)
+
+if __name__=="__main__":
+    main()
