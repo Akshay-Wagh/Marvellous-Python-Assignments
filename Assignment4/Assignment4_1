@@ -2,7 +2,7 @@
 #Input : 4 Output : 16
 #Input : 6 Output : 64
 
-Power=lambda no:no**2
+Power=lambda no:2**no
 
 def main():
     value = int(input("Enter number :"))
