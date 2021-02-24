@@ -1,0 +1,52 @@
+# Write a program which contains filter(), map() and reduce() in it.Python application which contains one list of numbers.
+# List contains the numbers which are accepted from user.Filter should filter out all such numbers which greater than or
+# equal to 70 and less than or equal to 90. Map function will increase each number by 10. Reduce will return product of
+# all that numbers.
+# Input List = [4, 34, 36, 76, 68, 24, 89, 23, 86, 90, 45, 70]
+# List after filter = [76, 89, 86, 90, 70]
+# List after map = [86, 99, 96, 100, 80]
+# Output of reduce = 6538752000
+
+
+def Filter(arr):
+    brr=[]
+    for i in range(len(arr)):
+        if ((arr[i])>=70)and((arr[i])<=90):
+            brr.append(arr[i])
+    return brr
+
+def Map(arr):
+    for i in range(len(arr)):
+        arr[i]=arr[i]+10
+    return arr
+
+def Reduce(arr):
+    p=1
+    for i in range(len(arr)):
+        p *=arr[i]
+    return p
+
+def main():
+    arr=[]
+    print("Enter the number of elements:")
+    size=int(input())
+
+    #print("Enter the elemnts")
+    for i in range(size):
+        print("Enter elements number:",i+1)
+        no=int(input())
+        arr.append(no)
+
+    print("Your Entereded data is:",arr)
+    newdata=Filter(arr)
+    print("List After filter is:",newdata)
+
+    newdata1=Map(newdata)
+    print("List After map:",newdata1)
+
+    output=Reduce(newdata1)
+    print("Product is:",output)
+
+
+if __name__=="__main__":
+    main()
